@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Donut Depot & Bakery</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+      body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--light-pink, #fde4ec);
+      padding: 1rem;
+      border-bottom: 4px solid var(--pink, #f082a8);
+      position: relative;
+      z-index: 10;
+    }
+    .logo img {
+      height: 100px;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+    }
+    .nav-links a:hover {
+      color: var(--pink, #f082a8);
+    }
+    .nav-links a[href="location.html"] {
+      background-color: #f082a8;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--light-pink, #fde4ec);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+        z-index: 9;
+        border: none;
+        border-radius: 0;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+    }
+
+    .contact form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .form-left, .form-right {
+      flex: 1;
+      min-width: 250px;
+    }
+    .form-left input {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+    .form-right textarea {
+      width: 100%;
+      height: 100%;
+      padding: 0.75rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+    .contact button[type="submit"] {
+      display: block;
+      margin: 2rem auto 0;
+      background-color: var(--pink, #f082a8);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .contact button[type="submit"]:hover {
+      background-color: var(--blue, #8cc2ce);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Donut Depot & Bakery Logo">
+      </a>
+      <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="location.html">LOCATION & HOURS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section style="padding: 2rem; text-align: center;">
+    <h2>Photo Gallery</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
+      <img src="placeholder1.jpg" alt="Gallery image" style="width: 100%; border-radius: 12px;" />
+      <img src="placeholder2.jpg" alt="Gallery image" style="width: 100%; border-radius: 12px;" />
+      <img src="placeholder3.jpg" alt="Gallery image" style="width: 100%; border-radius: 12px;" />
+      <img src="placeholder4.jpg" alt="Gallery image" style="width: 100%; border-radius: 12px;" />
+      <img src="placeholder5.jpg" alt="Gallery image" style="width: 100%; border-radius: 12px;" />
+      <img src="placeholder6.jpg" alt="Gallery image" style="width: 100%; border-radius: 12px;" />
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Donut Depot & Bakery | Griffith, IN</p>
+  </footer>
+</body>
+</html>
