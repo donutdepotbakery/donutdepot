@@ -1,0 +1,192 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+.close-menu {
+  display: none;
+}
+
+.close-menu button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 99;
+}
+
+@media (max-width: 768px) {
+  .close-menu {
+    display: block;
+  }
+}
+
+
+/* Fix font globally */
+body {
+  font-family: 'Poppins', sans-serif !important;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Adjust logo size */
+.logo img {
+  height: 100px;
+  max-height: 100px;
+  width: auto;
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 45px;
+    max-height: 45px;
+  }
+}
+
+
+:root {
+  --pink: #f082a8;
+  --blue: #8cc2ce;
+  --cream: #fffaf4;
+  --brown: #5c3a2e;
+  --light-pink: #fde4ec;
+  --light-blue: #d9f2f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', cursive;
+  background-color: var(--cream);
+  color: var(--brown);
+  line-height: 1.6;
+}
+
+.navbar {
+  background-color: var(--light-pink);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid var(--pink);
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--pink);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--brown);
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--pink);
+}
+
+.hero {
+  background-color: var(--light-blue);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  color: var(--brown);
+}
+
+.btn {
+  background-color: var(--pink);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--blue);
+}
+
+.hero-image img {
+  max-width: 100%;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  color: var(--pink);
+  margin-bottom: 1.5rem;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 500px;
+  margin: 0.5rem auto;
+  padding: 0.75rem;
+  border: 2px solid var(--light-blue);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  display: block;
+}
+
+button[type=\"submit\"] {
+  background-color: var(--blue);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button[type=\"submit\"]:hover {
+  background-color: var(--pink);
+}
+
+footer {
+  background-color: var(--light-pink);
+  padding: 1rem;
+  text-align: center;
+  color: var(--brown);
+  border-top: 4px solid var(--pink);
+  font-size: 0.9rem;
+}
